@@ -14,7 +14,6 @@ import './config/dayjs';
 import { SharedModule } from 'app/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
-import { MatomoModule } from 'ngx-matomo';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { NgbDateDayjsAdapter } from './config/datepicker-adapter';
 import { fontAwesomeIcons } from './config/font-awesome-icons';
@@ -28,18 +27,6 @@ import { ErrorComponent } from './layouts/error/error.component';
 @NgModule({
   imports: [
     BrowserModule,
-    MatomoModule.forRoot({
-      scriptUrl: '//matomo.example.com/matomo.js',
-      trackers: [
-        {
-          trackerUrl: 'http://matomo-carcom.apps.ir-thr-at1.arvan.run/matomo.php',
-          siteId: 1
-        }
-      ],
-      routeTracking: {
-        enable: true
-      }
-    }),
     SharedModule,
     HomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
